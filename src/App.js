@@ -11,6 +11,8 @@ import Contact from './pages/Contact';
 import Footer from './components/Footer';
 import Sidebar from './components/Sidebar';
 import { Text, Flex, Box } from 'rebass';
+import Typography from './components/Typography';
+import AppBar from './components/Appbar';
 
 import { Link, Router, Route, Routes, useLocation, BrowserRouter } from 'react-router-dom';
 
@@ -18,18 +20,28 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
+        <AppBar/>
+        {/* <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
         <div className='Title'>
           <Flex
             px={2}
             color='black'
             alignItems='center'
           >
+            
             <a className={'TitleLink'} href='/'>
-              <Text fontSize={4} fontWeight='bold'>Title</Text>
+              <Typography
+                component="h1"
+                variant="h5"
+                color="black"
+                className="imageTitle"
+                fontWeight="bold"
+              >
+                Title
+              </Typography>
             </a>
           </Flex>
-        </div>
+        </div> */}
         <Routes>
           <Route path = '/' element={<HomePage />} />
           <Route path = '/resume' element={<Resume />} />

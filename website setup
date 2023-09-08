@@ -6,10 +6,18 @@ Navigation bar
     -> Contact
 
 Home
+format: Background photo, and scrollable link pictures
     -> About Me
-        ->
+        format: Images/scrollable above text
+        -> Who am I
+        -> Where I am from
+        -> Interests 1 (badminton)
+        -> Interests 2 (workout)
+        -> Interests 3 (NBA)
     -> Portfolio
+        format: 3 vertical image
         -> Software
+            format: scrollable w/ Flip card
             -> Achievement (Teaching Assistant award, Sachack IV winner)
             -> Certifications (TA cert, Introduction to DL cert)
             -> Projects 1 (Sudocore)
@@ -18,12 +26,14 @@ Home
             -> Projects 4 (8 puzzle solver)
             -> Skills: 
         -> Architecture
+            format: scrollable w/ Flip card
             -> Achievement (Graduated with Cum Laude title)
             -> Projects 1 (42 Showarch)
             -> Projects 2 (MoMAI)
             -> Projects 3 (Rotary Riverwalk)
             -> Skills: 
     -> Resume
+        format: scrollable w/ Flip card
         -> Objective/Introduction/Summary
         -> Work experience
         -> Education
@@ -31,6 +41,7 @@ Home
         -> Relevant Skills
         -> Link to pdf / download pdf
     -> Contact
+        format: 2circle link per row
         -> Email
         -> Number
         -> ISU link (https://www.cs.iastate.edu/people/yee-chuen-teoh)
