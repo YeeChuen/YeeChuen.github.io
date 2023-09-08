@@ -9,38 +9,29 @@ import Resume from './pages/Resume';
 import Software from './pages/Software';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
+import Sidebar from './components/Sidebar';
+import { Text, Flex, Box } from 'rebass';
 
-import { Router, Route, Routes, useLocation, BrowserRouter } from 'react-router-dom';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           This website is under maintenance
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
+import { Link, Router, Route, Routes, useLocation, BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <Navigationbar />
+        <Sidebar pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
+        <div className='Title'>
+          <Flex
+            px={2}
+            color='black'
+            alignItems='center'
+          >
+            <a className={'TitleLink'} href='/'>
+              <Text fontSize={4} fontWeight='bold'>Title</Text>
+            </a>
+          </Flex>
+        </div>
         <Routes>
           <Route path = '/' element={<HomePage />} />
-          <Route path = '/home' element={<HomePage />} />
           <Route path = '/resume' element={<Resume />} />
           <Route path = '/portfolio' element={<Portfolio />} />
           <Route path = '/portfolio/software' element={<Software />} />

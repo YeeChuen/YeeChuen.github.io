@@ -1,0 +1,39 @@
+Navigation bar
+    -> Home
+    -> About Me
+    -> Portfolio
+    -> Resume
+    -> Contact
+
+Home
+    -> About Me
+        ->
+    -> Portfolio
+        -> Software
+            -> Achievement (Teaching Assistant award, Sachack IV winner)
+            -> Certifications (TA cert, Introduction to DL cert)
+            -> Projects 1 (Sudocore)
+            -> Projects 2 (Othello AI)
+            -> Projects 3 (BattleNightBox)
+            -> Projects 4 (8 puzzle solver)
+            -> Skills: 
+        -> Architecture
+            -> Achievement (Graduated with Cum Laude title)
+            -> Projects 1 (42 Showarch)
+            -> Projects 2 (MoMAI)
+            -> Projects 3 (Rotary Riverwalk)
+            -> Skills: 
+    -> Resume
+        -> Objective/Introduction/Summary
+        -> Work experience
+        -> Education
+        -> Projects
+        -> Relevant Skills
+        -> Link to pdf / download pdf
+    -> Contact
+        -> Email
+        -> Number
+        -> ISU link (https://www.cs.iastate.edu/people/yee-chuen-teoh)
+        -> Linkedin
+        -> Github
+        -> Instagram
