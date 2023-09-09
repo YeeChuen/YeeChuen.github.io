@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Page Not Found</title>
+</head>
+<body>
+  <script>
+    if (window.location.pathname !== '/' && window.location.pathname !== '/your-repository-name/') {
+      window.location.href = '/your-repository-name' + window.location.pathname;
+    }
+  </script>
+</body>
+</html>

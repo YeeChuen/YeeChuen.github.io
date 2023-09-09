@@ -14,11 +14,12 @@ import { Text, Flex, Box } from 'rebass';
 import Typography from './components/Typography';
 import AppBar from './components/Appbar';
 
-import { Link, Router, Route, Routes, useLocation, BrowserRouter, HashRouter } from 'react-router-dom';
+import { Link, Router, Route, Routes, BrowserRouter, HashRouter } from 'react-router-dom';
 
 function App() {
   return (
     <>
+      <BrowserRouter basename='/'>
         <AppBar/>
         <Routes>
           <Route path = '' element={<HomePage />} />
@@ -30,6 +31,7 @@ function App() {
           <Route path = 'contact' element={<Contact />} />
         </Routes>
         <Footer />
+      </BrowserRouter>
     </>
   );
 }
