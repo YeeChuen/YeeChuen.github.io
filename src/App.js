@@ -18,11 +18,10 @@ import { Link, Router, Route, Routes, BrowserRouter, HashRouter } from 'react-ro
 
 function App() {
   return (
-    <>
-      <BrowserRouter basename='/'>
+    <div className="App">
         <AppBar/>
         <Routes>
-          <Route path = '' element={<HomePage />} />
+          <Route exact path = '' element={<HomePage />} />
           <Route path = 'resume' element={<Resume />} />
           <Route path = 'portfolio' element={<Portfolio />} />
           <Route path = 'portfolio/software' element={<Software />} />
@@ -31,8 +30,7 @@ function App() {
           <Route path = 'contact' element={<Contact />} />
         </Routes>
         <Footer />
-      </BrowserRouter>
-    </>
+    </div>
   );
 }
 
