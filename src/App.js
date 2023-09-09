@@ -14,7 +14,7 @@ import { Text, Flex, Box } from 'rebass';
 import Typography from './components/Typography';
 import AppBar from './components/Appbar';
 
-import { Link, Router, Route, Routes, BrowserRouter, HashRouter } from 'react-router-dom';
+import { Link, Router, Route, Routes, BrowserRouter, HashRouter, Switch } from 'react-router-dom';
 
 function App() {
   return (
