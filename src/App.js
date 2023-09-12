@@ -24,7 +24,7 @@ function App() {
           <Route exact path = '' element={<HomePage />} />
           <Route path = 'resume' element={<Resume />} />
           <Route path = 'portfolio' element={<Portfolio />} />
-          <Route path = 'portfolio/software' element={<Software />} />
+          <Route path = 'portfolio/computerscience' element={<Software />} />
           <Route path = 'portfolio/architecture' element={<Architecture />} />
           <Route path = 'about' element={<AboutMe />} />
           <Route path = 'contact' element={<Contact />} />

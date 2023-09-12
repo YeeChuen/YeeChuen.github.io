@@ -1,39 +1,27 @@
 import React from 'react';
 import './style.css';
 import Container from '@mui/material/Container';
-import { ImageBackdrop, ImageIconButton } from './ImageConst';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
 import Typography from '../components/Typography';
 import Box from '@mui/material/Box';
-import { Image, Flex, Text, Card, Heading } from 'rebass';
-import { styled } from '@mui/material/styles';
-import ButtonBase from '@mui/material/ButtonBase';
-
-const images = [
-    {
-      url: require('./images/testimage.JPG'),
-      title: 'About Me',
-      width: '100%',
-      href: '/about',
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1531299204812-e6d44d9a185c?auto=format&fit=crop&w=400',
-      title: 'Portfolio',
-      width: '100%',
-      href: '/portfolio',
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=400',
-      title: 'Contact',
-      width: '100%',
-      href: '/contact',
-    },
-  ];
+import { Image, Flex } from 'rebass';
 
 const Contact =()=> {
-    const backgroundImage =
-    'https://images.unsplash.com/photo-1534854638093-bada1813ca19?auto=format&fit=crop&w=1400';
+    const social1 = require('./images/socials/gmail.png');
+    const social2 = require('./images/socials/phone.png');
+    const social3 = require('./images/socials/github.png');
+    const social4 = require('./images/socials/Iowa State University.png');
+    const social5 = require('./images/socials/linkedin.png');
+    const social6 = require('./images/socials/instagram.png');
+
+    const copyToClipboard = (e) => {
+        this.textArea.select();
+        document.execCommand('copy');
+        // This is just personal preference.
+        // I prefer to not show the whole text area selected.
+        e.target.focus();
+        this.setState({ copySuccess: 'Copied!' });
+      };
 
     return (
         <>
@@ -43,52 +31,58 @@ const Contact =()=> {
             </Typography>
             <Flex flexWrap='wrap' mx={-2}>   
                 <Box px={0} py={2} width={1/2}>
-                    <Image
-                    width={[ 1, 1, 1/2 ]}
-                    src={backgroundImage}
-                    style={{
-                        width: 150,
-                        height: 150,
-                        borderRadius: 150 / 2,
-                        overflow: "hidden",
-                        borderWidth: 3,
-                        borderColor: "red"
-                    }}
-                    />
-                    <Typography
-                        variant="h6"
-                        color="black"
-                    >
-                        Email
-                        <div style={{ marginBottom: 30 }}/>
-                    </Typography>
+                    <a href={'mailto:tychuen98@gmail.com'} style={{ textDecoration:'none' }}>
+                        <Image
+                        width={[ 1, 1, 1/2 ]}
+                        src={social1}
+                        style={{
+                            width: 150,
+                            height: 150,
+                            borderRadius: 150 / 2,
+                            overflow: "hidden",
+                            borderWidth: 3,
+                            borderColor: "red"
+                        }}
+                        />
+                        <Typography
+                            variant="h6"
+                            color="black"
+                        >
+                            Email: 
+                            <div>tychuen98@gmail.com</div>
+                            <div style={{ marginBottom: 30 }}/>
+                        </Typography>
+                    </a>
                 </Box>
                 <Box px={0} py={2} width={1/2}>
-                    <Image
-                    width={[ 1, 1, 1/2 ]}
-                    src={backgroundImage}
-                    style={{
-                        width: 150,
-                        height: 150,
-                        borderRadius: 150 / 2,
-                        overflow: "hidden",
-                        borderWidth: 3,
-                        borderColor: "red"
-                    }}
-                    />
-                    <Typography
-                        variant="h6"
-                        color="black"
-                    >
-                        Phone number
-                        <div style={{ marginBottom: 30 }}/>
-                    </Typography>
+                    <a href={'tel:515-735-8778'} style={{ textDecoration:'none' }}>
+                        <Image
+                        width={[ 1, 1, 1/2 ]}
+                        src={social2}
+                        style={{
+                            width: 150,
+                            height: 150,
+                            borderRadius: 150 / 2,
+                            overflow: "hidden",
+                            borderWidth: 3,
+                            borderColor: "red"
+                        }}
+                        />
+                        <Typography
+                            variant="h6"
+                            color="black"
+                        >
+                            Phone: 
+                            <div>+1(515)-735-8778</div>
+                            <div style={{ marginBottom: 30 }}/>
+                        </Typography>
+                    </a>
                 </Box>
                 <Box px={0} py={2} width={1/2}>
                     <a href={'https://github.com/YeeChuen'} style={{ textDecoration:'none' }}>
                         <Image
                         width={[ 1, 1, 1/2 ]}
-                        src={backgroundImage}
+                        src={social3}
                         style={{
                             width: 150,
                             height: 150,
@@ -111,7 +105,7 @@ const Contact =()=> {
                     <a href={'https://www.cs.iastate.edu/people/yee-chuen-teoh'} style={{ textDecoration:'none' }}>
                         <Image
                         width={[ 1, 1, 1/2 ]}
-                        src={backgroundImage}
+                        src={social4}
                         style={{
                             width: 150,
                             height: 150,
@@ -134,7 +128,7 @@ const Contact =()=> {
                     <a href={'https://www.linkedin.com/in/yeechuenteoh/'} style={{ textDecoration:'none' }}>
                         <Image
                         width={[ 1, 1, 1/2 ]}
-                        src={backgroundImage}
+                        src={social5}
                         style={{
                             width: 150,
                             height: 150,
@@ -157,7 +151,7 @@ const Contact =()=> {
                     <a href={'https://www.instagram.com/_chuen.t/'} style={{ textDecoration:'none' }}>
                         <Image
                         width={[ 1, 1, 1/2 ]}
-                        src={backgroundImage}
+                        src={social6}
                         style={{
                             width: 150,
                             height: 150,

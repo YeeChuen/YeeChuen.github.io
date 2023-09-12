@@ -1,48 +1,47 @@
 import React from 'react';
 import './style.css';
 import Container from '@mui/material/Container';
-import { ImageBackdrop, ImageIconButton } from './ImageConst';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import Typography from '../components/Typography';
 import Box from '@mui/material/Box';
-import { Image, Flex, Text, Card, Heading } from 'rebass';
-import { styled } from '@mui/material/styles';
-import ButtonBase from '@mui/material/ButtonBase';
 import Button from '@mui/material/Button';
+import { Image } from 'rebass';
 
-const images = [
+const resumeFrontPic = [
     {
-      url: require('./images/testimage.JPG'),
-      title: 'About Me',
-      width: '100%',
-      href: '/about',
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1531299204812-e6d44d9a185c?auto=format&fit=crop&w=400',
-      title: 'Portfolio',
+        url: require('./images/Resume/resumeFrontPic.jpg'),
+      title: 'Resume Front Pic',
       width: '100%',
       href: '/portfolio',
     },
+  ];
+
+const workExperience = [
     {
-      url: 'https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=400',
-      title: 'Contact',
+        url: require('./images/Resume/appleStudio.jpg'),
+      title: 'Resume Front Pic',
       width: '100%',
-      href: '/contact',
+      href: '/portfolio',
+    },
+  ];
+
+  const images = [
+    {
+      url: require('./images/portfolio/resume.jpg'),
+      title: 'Apple Studio',
+      width: '100%',
+      href: '/about',
     },
   ];
 
 const Resume =()=> {
-    const backgroundImage =
-    'https://images.unsplash.com/photo-1534854638093-bada1813ca19?auto=format&fit=crop&w=1400';
-
     const onDownload = () => {
         const link = document.createElement("a");
-        link.download = require('./images/testimage.JPG');
-        link.href = require('./images/testimage.JPG');
+        link.download = require('./images/portfolio/YeeChuen_Teoh_Resume.pdf');
+        link.href = require('./images/portfolio/YeeChuen_Teoh_Resume.pdf');
         link.click();
       };
-    
 
     return (
         <>
@@ -51,7 +50,7 @@ const Resume =()=> {
                 Yee Chuen's Resume
             </Typography>
             <Carousel>
-                {images.map((image) => (
+                {resumeFrontPic.map((image) => (
                     <Box
                     sx={{
                         position: 'relative',
@@ -60,7 +59,7 @@ const Resume =()=> {
                         top: 0,
                         bottom: 0,
                         backgroundSize: 'cover',
-                        backgroundPosition: 'center 40%',
+                        backgroundPosition: 'center 0%',
                         backgroundImage: `url(${image.url})`,
                         width: '100%',
                         height: 500, 
@@ -68,125 +67,30 @@ const Resume =()=> {
                     />
                 ))}
             </Carousel>
+
             <Typography
                 variant="h6"
                 color="black"
             >
-                TODO: Objective
+                <div style={{ marginBottom: 30 }}>
+                I am Yee Chuen Teoh, currently pursuing a Master of Computer Science degree while simultaneously serving as a Bioinformatics Research Assistant at Iowa State University. My academic journey is set to culminate in Spring 2024, and upon graduation, I am eager to transition into the role of a software engineer, driven by my passion for the field.
+                </div>
+                <div>
+                Below is my most up to date resume, check it out! by 9/11/2023.
+                </div>
                 <hr/>
                 <div style={{ marginBottom: 30 }}/>
             </Typography>
-            <Carousel>
-                {images.map((image) => (
-                    <Box
-                    sx={{
-                        position: 'relative',
-                        left: 0,
-                        right: 0,
-                        top: 0,
-                        bottom: 0,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center 40%',
-                        backgroundImage: `url(${image.url})`,
-                        width: '100%',
-                        height: 500, 
-                    }}
-                    />
-                ))}
-            </Carousel>
+            <Image src={require('./images/portfolio/resume.jpg')} />
+            
             <Typography
                 variant="h6"
                 color="black"
             >
-                TODO: workexperience
                 <hr/>
-                <div style={{ marginBottom: 30 }}/>
-            </Typography>
-            <Carousel>
-                {images.map((image) => (
-                    <Box
-                    sx={{
-                        position: 'relative',
-                        left: 0,
-                        right: 0,
-                        top: 0,
-                        bottom: 0,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center 40%',
-                        backgroundImage: `url(${image.url})`,
-                        width: '100%',
-                        height: 500, 
-                    }}
-                    />
-                ))}
-            </Carousel>
-            <Typography
-                variant="h6"
-                color="black"
-            >
-                TODO: Education
-                <hr/>
-                <div style={{ marginBottom: 30 }}/>
-            </Typography>
-            <Carousel>
-                {images.map((image) => (
-                    <Box
-                    sx={{
-                        position: 'relative',
-                        left: 0,
-                        right: 0,
-                        top: 0,
-                        bottom: 0,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center 40%',
-                        backgroundImage: `url(${image.url})`,
-                        width: '100%',
-                        height: 500, 
-                    }}
-                    />
-                ))}
-            </Carousel>
-            <Typography
-                variant="h6"
-                color="black"
-            >
-                TODO: Relevant Projects
-                <hr/>
-                <div style={{ marginBottom: 30 }}/>
-            </Typography>
-            <Carousel>
-                {images.map((image) => (
-                    <Box
-                    sx={{
-                        position: 'relative',
-                        left: 0,
-                        right: 0,
-                        top: 0,
-                        bottom: 0,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center 40%',
-                        backgroundImage: `url(${image.url})`,
-                        width: '100%',
-                        height: 500, 
-                    }}
-                    />
-                ))}
-            </Carousel>
-            <Typography
-                variant="h6"
-                color="black"
-            >
-                TODO: Relevant Skills
-                <hr/>
-                <div style={{ marginBottom: 30 }}/>
-            </Typography>
-            <Typography
-                variant="h6"
-                color="black"
-            >
-            <Button sx={{ marginLeft: 1 }} onClick={onDownload} variant="contained" color="primary">
-                Download Resume
-            </Button>
+                <Button sx={{ marginLeft: 1 }} onClick={onDownload} variant="contained" color="primary">
+                    Download Resume
+                </Button>
                 <div style={{ marginBottom: 30 }}/>
             </Typography>
             </Container>

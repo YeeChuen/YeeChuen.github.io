@@ -1,28 +1,26 @@
 import React from 'react';
-import { Image, Flex, Text, Card, Heading } from 'rebass';
+import { Flex, Text, Card, Heading } from 'rebass';
 
-import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import ButtonBase from '@mui/material/ButtonBase';
 import Container from '@mui/material/Container';
 import Typography from '../components/Typography';
 import { ImageBackdrop, ImageIconButton } from './ImageConst';
 
 const images = [
   {
-    url: require('./images/testimage.JPG'),
+    url: require('./images/homepage/Monkey.jpg'),
     title: 'About Me',
     width: '100%',
     href: '/about',
   },
   {
-    url: 'https://images.unsplash.com/photo-1531299204812-e6d44d9a185c?auto=format&fit=crop&w=400',
+    url: require('./images/homepage/portfolio.jpg'),
     title: 'Portfolio',
     width: '100%',
     href: '/portfolio',
   },
   {
-    url: 'https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=400',
+    url: require('./images/homepage/contact.jpg'),
     title: 'Contact',
     width: '100%',
     href: '/contact',
@@ -30,10 +28,8 @@ const images = [
 ];
 
 export default function HomePage() {
-    const backgroundImage =
-    'https://images.unsplash.com/photo-1534854638093-bada1813ca19?auto=format&fit=crop&w=1400';
+    const backgroundImage = require('./images/homepage/HomepageFront.jpg');
   
-
   return (
     <Container component="section" sx={{ mb: 4 }}>
             <Box
@@ -44,7 +40,7 @@ export default function HomePage() {
                 top: 0,
                 bottom: 0,
                 backgroundSize: 'cover',
-                backgroundPosition: 'center 40%',
+                backgroundPosition: 'center 60%',
                 backgroundImage: `url(${backgroundImage})`,
                 width: '100%',
                 height: 600, 
@@ -96,7 +92,7 @@ export default function HomePage() {
                 top: 0,
                 bottom: 0,
                 backgroundSize: 'cover',
-                backgroundPosition: 'center 40%',
+                backgroundPosition: 'center 10%',
                 backgroundImage: `url(${image.url})`,
               }}
             />
@@ -131,72 +127,3 @@ export default function HomePage() {
     </Container>
   );
 }
-
-const HomePageOld =()=> {
-    return (
-        <>  
-            <Card
-                p={4}
-                py={7}
-                backgroundImage='url(https://source.unsplash.com/random/1024x768)'
-                backgroundSize='cover'
-                borderRadius={8}
-                color='white'
-                bg='darkgray'
-                >
-                <Heading
-                textAlign='center'
-                fontSize={[ 5, 6 ]}>
-                Homepage backgroundImage
-                </Heading>
-            </Card>
-            <Flex>
-                <Box width={1/3}>
-                    <a href='/about' style={{ textDecoration: 'none' }}>
-                        <Card
-                            p={2}
-                            py={6}
-                            backgroundImage='url(https://source.unsplash.com/random/1024x768)'
-                            backgroundSize='cover'
-                            borderRadius={8}
-                            color='white'
-                            bg='black'
-                        >
-                            <Text color='white' >About Me</Text>
-                        </Card>
-                    </a>
-                </Box>
-                <Box width={1/3}>
-                    <a href='/portfolio' style={{ textDecoration: 'none' }}>
-                        <Card
-                            p={2}
-                            py={6}
-                            backgroundImage='url(https://source.unsplash.com/random/1024x768)'
-                            backgroundSize='cover'
-                            borderRadius={8}
-                            color='white'
-                            bg='grey'
-                        >
-                            <Text color='white' >Portfolio</Text>
-                        </Card>
-                    </a>
-                </Box>
-                <Box width={1/3}>
-                    <a href='/contact' style={{ textDecoration: 'none' }}>
-                        <Card
-                            p={2}
-                            py={6}
-                            backgroundImage='url(https://source.unsplash.com/random/1024x768)'
-                            backgroundSize='cover'
-                            borderRadius={8}
-                            color='white'
-                            bg='white'
-                        >
-                            <Text color='black' >Contact</Text>
-                        </Card>
-                    </a>
-                </Box>
-            </Flex>
-        </>
-    );
-};
